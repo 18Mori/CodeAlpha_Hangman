@@ -5,7 +5,7 @@ word = random.choice(words)
 # setup variables
 guessed_letters = []
 attempts_left = 6
-print("---Hangman Game---")
+print("--- Hangman Game ---")
 print("Try to guess the word, one letter at a time.")
 
 def show_word():
@@ -16,13 +16,13 @@ def show_word():
         else:
             show += "_ "
     return show.strip()
-  
+
 while attempts_left > 0:
     print(f"\nWord: {show_word()}")
     print(f"Attempts left: {attempts_left}")
     
     guess = input("Guess a letter: \n").lower()
-  # input validation
+    # input validation
     if len(guess) != 1 or not guess.isalpha():
         print("Please enter a single letter.")
         continue
